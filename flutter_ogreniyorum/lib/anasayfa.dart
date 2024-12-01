@@ -10,6 +10,17 @@ class Anasayfa extends StatefulWidget {
 class _AnasayfaState extends State<Anasayfa> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(title: const Text("Hello"),),
+      body: const Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text("Merhaba dünya",style: TextStyle(fontSize: 30),
+            )
+          ],
+        ),
+      ),
+    );
   }
 }
