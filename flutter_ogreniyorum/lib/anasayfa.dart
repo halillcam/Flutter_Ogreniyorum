@@ -17,7 +17,40 @@ class _AnasayfaState extends State<Anasayfa> {
       centerTitle: true,
       
       ),
-      body: const Center(),
+      body: Column(
+        children: [
+          Padding(padding: 
+          const EdgeInsets.all(8),
+          child: Text("Beef Cheese",style: TextStyle(fontSize: 36,color: Anarenk,fontWeight: FontWeight.bold),),
+          ),
+          //Image.asset("images/pizza.png"),
+
+          Row( 
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              TextButton(onPressed: (){},
+               style: TextButton.styleFrom(backgroundColor: Anarenk),
+               child: Text("Cheese",style: TextStyle(color: yaziRenk1),),
+               ),
+
+                TextButton(onPressed: (){},
+               style: TextButton.styleFrom(backgroundColor: Anarenk),
+               child: Text("Sausage",style: TextStyle(color: yaziRenk1),),
+               ),
+
+                TextButton(onPressed: (){},
+               style: TextButton.styleFrom(backgroundColor: Anarenk),
+               child: Text("Pepper",style: TextStyle(color: yaziRenk1),),
+               ),
+
+                TextButton(onPressed: (){},
+               style: TextButton.styleFrom(backgroundColor: Anarenk),
+               child: Text("Olive",style: TextStyle(color: yaziRenk1),),
+               ),
+            ],
+          )
+        ],
+      ),
       );
   }
 }
