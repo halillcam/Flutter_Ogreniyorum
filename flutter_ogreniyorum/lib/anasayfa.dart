@@ -25,12 +25,13 @@ class _AnasayfaState extends State<Anasayfa> {
           ),
           //Image.asset("images/pizza.png"),
 
-          Row( 
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          Padding(padding: const EdgeInsets.only(top: 16),
+           child: Row( mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+           
             children: [
               TextButton(onPressed: (){},
                style: TextButton.styleFrom(backgroundColor: Anarenk),
-               child: Text("Cheese",style: TextStyle(color: yaziRenk1),),
+               child:  Text("Cheese",style: TextStyle(color: yaziRenk1),),
                ),
 
                 TextButton(onPressed: (){},
@@ -43,12 +44,15 @@ class _AnasayfaState extends State<Anasayfa> {
                child: Text("Pepper",style: TextStyle(color: yaziRenk1),),
                ),
 
-                TextButton(onPressed: (){},
+               TextButton(onPressed: (){},
                style: TextButton.styleFrom(backgroundColor: Anarenk),
                child: Text("Olive",style: TextStyle(color: yaziRenk1),),
                ),
             ],
           )
+          )
+
+         
         ],
       ),
       );
