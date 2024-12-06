@@ -24,8 +24,16 @@ class _AnasayfaState extends State<Anasayfa> {
           child: Text("Beef Cheese",style: TextStyle(fontSize: 36,color: Anarenk,fontWeight: FontWeight.bold),),
           
           ),
-           Container(width: 250,height: 180,
-           child: Image.asset("images/pizza.png"),),
+          
+          SizedBox(
+            width: 250, height: 180,
+            child: Image.asset("images/pizza.png")
+          ), 
+
+
+           /*Container(width: 250,height: 180,
+           child: Image.asset("images/pizza.png")
+           ),*/
            
           //Image.asset("images/pizza.png"),
 
@@ -33,6 +41,13 @@ class _AnasayfaState extends State<Anasayfa> {
            child: Row( mainAxisAlignment: MainAxisAlignment.spaceEvenly,
   
             children: [
+              
+              My_Button_Widget("Pepper"),
+              My_Button_Widget("Sausage"),
+              My_Button_Widget("Cheese"),
+              My_Button_Widget("Olive"),
+            
+              /*
               TextButton(onPressed: (){},
                style: TextButton.styleFrom(backgroundColor: Anarenk),
                child:  Text("Cheese",style: TextStyle(color: yaziRenk1),),
@@ -51,7 +66,7 @@ class _AnasayfaState extends State<Anasayfa> {
                TextButton(onPressed: (){},
                style: TextButton.styleFrom(backgroundColor: Anarenk),
                child: Text("Olive",style: TextStyle(color: yaziRenk1),),
-               ),
+               ),*/
             ],
           )
           ),
@@ -62,6 +77,7 @@ class _AnasayfaState extends State<Anasayfa> {
                 Text("20 min",style: TextStyle(color: yaziRenk2,fontSize: 22,fontWeight: FontWeight.bold),),
                 Text("Delivery",style: TextStyle(color: Anarenk,fontSize: 22,fontWeight: FontWeight.bold),),
                 Text("Pizza Lover",style: TextStyle(color: yaziRenk2,fontSize: 22,),),
+
               ],
           ),
           ),
@@ -72,16 +88,36 @@ class _AnasayfaState extends State<Anasayfa> {
             children: [
               Text("\$ 5.98",style: TextStyle(fontSize: 44,color: Anarenk,fontWeight: FontWeight.bold),),
               //const Spacer(), bununla ikisi arasında ki mesafeyi uzatırız yani birini sağ koseye yapıstırırız digerınıde sol koseye
-              TextButton(onPressed: (){},
+
+              SizedBox( width: 200, height: 50,
+              child: TextButton(onPressed: (){},
                style: TextButton.styleFrom(backgroundColor: Anarenk,
                shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(5)))
                ),
                child: Text("ADD TO CART",style: TextStyle(color: yaziRenk1,fontSize: 18,),),
                ),
+              ),
             ],
-          )
-        ],
+        
+          ),
+        ], 
+             
       ),
       );
+  }
+}
+
+class My_Button_Widget extends StatelessWidget {
+  
+  String text;
+
+  My_Button_Widget(this.text);
+
+  @override
+  Widget build(BuildContext context) {
+    return TextButton(onPressed: (){},
+               style: TextButton.styleFrom(backgroundColor: Anarenk),
+               child:  Text(text,style: TextStyle(color: yaziRenk1),),
+               );
   }
 }
